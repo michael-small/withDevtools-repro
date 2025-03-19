@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { BooksStore } from './store';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: ``
 })
 export class AppComponent {
-  title = 'withDevtools-repro';
+    store = inject(BooksStore);
 }
